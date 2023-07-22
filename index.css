@@ -1,0 +1,232 @@
+/* 
+
+how many colors are there?
+1. board - gray
+2. bomb number text - each num diff color
+3. bombs left and time text - red
+
+how many diff components?
+1. game board
+2. board header
+3. cells board
+4. individual cells
+5. smiley face button
+6. bombs left tracker
+7. time tracker 
+
+*/
+:root {
+  --scoreboard-height: 32px;
+  --scoreboard-width: 54px;
+  --cell-size: 24px;
+  --primary-color: lightgrey;
+  --border-color: lightcyan;
+}
+
+#game-board {
+  background-color: var(--primary-color);
+  padding: 8px;
+  width: fit-content;
+  margin-top: 8px;
+}
+
+#game-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border: 4px inset var(--border-color);
+  padding: 8px;
+}
+
+.scoreboard {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: var(--scoreboard-height);
+  border: 2px inset var(--border-color);
+  background-color: rgba(0, 0, 0, 0.844);
+}
+
+#game-reset-button {
+  height: var(--scoreboard-height);
+  width: var(--scoreboard-height);
+  background-size: 100% 100%;
+}
+
+#difficulty-btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: white;
+  border: 1px solid lightgray;
+  padding: 8px;
+}
+
+.down-arrow {
+  width: 0px;
+  height: 0px;
+  margin-left: 4px;
+  border-top: 4px solid black;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+}
+
+#difficulty-options {
+  position: absolute;
+  border: 1px solid lightgray;
+  margin-top: 2px;
+}
+
+.level-option {
+  /* display: flex; */
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  width: 100px;
+  padding: 8px 0px 8px 8px;
+  font-size: 12px;
+  background-color: white;
+  text-transform: capitalize;
+}
+
+.hide-level-options {
+  display: none;
+}
+
+.unpressed-smiley-face {
+  background-image: url('./assets/face_unpressed.svg');
+}
+
+.pressed-smiley-face {
+  background-image: url('./assets/face_pressed.svg');
+}
+
+.victory-smiley-face {
+  background-image: url('./assets/face_win.svg');
+}
+
+.lost-smiley-face {
+  background-image: url('./assets//face_lose.svg');
+}
+
+#cell-grid-container {
+  margin-top: 8px;
+  border: 4px inset var(--border-color);
+}
+
+.grid-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.cell {
+  height: var(--cell-size);
+  width: var(--cell-size);
+  background-origin: border-box;
+  background-size: 100% 100%;
+  background-size: cover;
+  background-color: var(--primary-color);
+  /* border: 3px outset var(--border-color); */
+}
+
+.hidden {
+  background-image:url('./assets/closed.svg');
+}
+
+.score-digit {
+  height: var(--scoreboard-height);
+  width: 20px;
+  /* background-image:url('./assets/d0.svg'); */
+  background-size: 100% 100%;
+}
+
+.flagged {
+  background-image:url('./assets/flag.svg');
+}
+
+.digit-num- {
+  background-image:url('./assets/d-.svg');
+}
+
+.digit-num0 {
+  background-image:url('./assets/d0.svg');
+}
+
+.digit-num1 {
+  background-image:url('./assets/d1.svg');
+}
+
+.digit-num2 {
+  background-image:url('./assets/d2.svg');
+}
+
+.digit-num3 {
+  background-image:url('./assets/d3.svg');
+}
+
+.digit-num4 {
+  background-image:url('./assets/d4.svg');
+}
+
+.digit-num5 {
+  background-image:url('./assets/d5.svg');
+}
+
+.digit-num6 {
+  background-image:url('./assets/d6.svg');
+}
+
+.digit-num7 {
+  background-image:url('./assets/d7.svg');
+}
+
+.digit-num8 {
+  background-image:url('./assets/d8.svg');
+}
+
+.digit-num9 {
+  background-image:url('./assets/d9.svg');
+}
+
+.mine {
+  background-image:url('./assets/mine.svg');
+}
+
+.mine_red {
+  background-image:url('./assets/mine_red.svg');
+}
+
+.cell-num0 {
+  background-image:url('./assets/type0.svg');
+}
+
+.cell-num1 {
+  background-image:url('./assets/type1.svg');
+}
+
+.cell-num2 {
+  background-image:url('./assets/type2.svg');
+}
+
+.cell-num3 {
+  background-image:url('./assets/type3.svg');
+}
+
+.cell-num4 {
+  background-image:url('./assets/type4.svg');
+}
+
+.cell-num5 {
+  background-image:url('./assets/type5.svg');
+}
+
+.cell-num6 {
+  background-image:url('./assets/type6.svg');
+}
+
+.cell-num7 {
+  background-image:url('./assets/type7.svg');
+}
+
+.cell-num8 {
+  background-image:url('./assets/type8.svg');
+}

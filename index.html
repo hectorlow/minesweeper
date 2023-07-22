@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./index.css"></link>
+</head>
+<body>
+  <button id="difficulty-btn">
+    <span>Difficulty</span>
+    <div class="down-arrow"></div>
+  </button>
+  <div id="difficulty-options" class="hide-level-options"></div>
+  <div id="game-board">
+    <div id="game-header">
+      <div class="scoreboard">
+        <div id="bombs-left-hundreds" class="score-digit"></div>
+        <div id="bombs-left-tens" class="score-digit"></div>
+        <div id="bombs-left-ones" class="score-digit"></div>
+      </div>
+      <div id="game-reset-button" class="unpressed-smiley-face"></div>
+      <div class="scoreboard">
+        <div id="timer-hundreds" class="score-digit"></div>
+        <div id="timer-tens" class="score-digit"></div>
+        <div id="timer-ones" class="score-digit"></div>
+      </div>
+    </div>
+    <div id="cell-grid-container"></div>
+
+  </div>
+  <script src="./index.js"></script>
+</body>
+</html>
+
+<!-- 
+  Steps
+  1. comprehensive UI first
+  2. plan main functions of game
+  3. nitty gritty logic
+ -->
